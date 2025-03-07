@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope, FaCode, FaServer, FaMobile } from 'react-icons/fa';
+import { FaCloud } from 'react-icons/fa';
 import Navigation from '@/components/Navigation';
 import ProjectCarousel from '@/components/ProjectCarousel';
 
@@ -107,7 +108,7 @@ export default function Home() {
                 <FaCode className="text-2xl" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-              <p className="text-gray-300">React, Next.js, TypeScript, TailwindCSS, Framer Motion</p>
+              <p className="text-gray-300">React, Next.js, TypeScript, HTML/CSS, JavaScript</p>
             </motion.div>
             
             <motion.div 
@@ -120,7 +121,7 @@ export default function Home() {
                 <FaServer className="text-2xl" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Backend</h3>
-              <p className="text-gray-300">Node.js, Express, MongoDB, PostgreSQL, GraphQL</p>
+              <p className="text-gray-300">Node.js, Express.js, MongoDB, SQL, MySQL, API</p>
             </motion.div>
             
             <motion.div 
@@ -130,10 +131,10 @@ export default function Home() {
               transition={{ delay: 0.2 }}
             >
               <div className="w-16 h-16 bg-[rgba(var(--accent-color-3),0.1)] rounded-full mx-auto flex items-center justify-center mb-4 text-[rgb(var(--accent-color-3))]">
-                <FaMobile className="text-2xl" />
+                <FaCloud className="text-2xl" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Mobile</h3>
-              <p className="text-gray-300">React Native, Expo, Flutter, Mobile-First Design</p>
+              <h3 className="text-xl font-semibold mb-2">DevOps & Cloud</h3>
+              <p className="text-gray-300">AWS/Azure/GCloud, Docker, Kubernetes, CI/CD, Redux</p>
             </motion.div>
           </div>
         </motion.section>
@@ -156,12 +157,12 @@ export default function Home() {
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4">
                 <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[rgba(var(--accent-color),0.1)] flex items-center justify-center text-[rgb(var(--accent-color))] border border-[rgba(var(--accent-color),0.2)]">
-                  <span className="text-xl font-bold">CS</span>
+                  <span className="text-xl font-bold">BE</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Computer Science Degree</h3>
-                  <p className="text-[rgba(var(--accent-color-2),0.9)]">University Name • 2018-2022</p>
-                  <p className="mt-4 text-gray-300">Focused on web technologies, algorithms, and software engineering principles.</p>
+                  <h3 className="text-xl font-semibold mb-2">Bachelor of Engineering (ECE)</h3>
+                  <p className="text-[rgba(var(--accent-color-2),0.9)]">BMS Institute of Technology • 2024</p>
+                  {/*<p className="mt-4 text-gray-300">Focused on web technologies, algorithms, and software engineering principles.</p>*/}
                 </div>
               </div>
             </motion.div>
@@ -189,9 +190,25 @@ export default function Home() {
                   <span className="text-xl font-bold">SD</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Senior Web Developer</h3>
-                  <p className="text-[rgba(var(--accent-color),0.9)]">Company Name • 2022-Present</p>
-                  <p className="mt-4 text-gray-300">Led development of multiple full-stack web applications using modern technologies.</p>
+                  <h3 className="text-xl font-semibold mb-2">Full Stack Developer Intern</h3>
+                  <p className="text-[rgba(var(--accent-color),0.9)]">Sigma Tenant • 10/2022-03/2023</p>
+                  <p className="mt-4 text-gray-300">Developed company's main website using React.js, TailwindCSS, and TypeScript.</p>
+                </div>
+              </div>
+            </motion.div>
+            <motion.div 
+              className="card"
+              whileHover={{ scale: 1.02 }}
+              {...fadeInUp}
+            >
+              <div className="flex flex-col md:flex-row md:items-center gap-4">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-[rgba(var(--accent-color-2),0.1)] flex items-center justify-center text-[rgb(var(--accent-color-2))] border border-[rgba(var(--accent-color-2),0.2)]">
+                  <span className="text-xl font-bold">SD</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">Frontend Developer Intern</h3>
+                  <p className="text-[rgba(var(--accent-color),0.9)]">Organic Inventions • 02/2022-07/2022</p>
+                  <p className="mt-4 text-gray-300">Worked on multiple projects and collaborated with the team to deliver the best results.</p>
                 </div>
               </div>
             </motion.div>
