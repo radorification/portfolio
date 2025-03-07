@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Portfolio Website
+
+A sleek, responsive portfolio website built with Next.js, TypeScript, Tailwind CSS, and Framer Motion. Features smooth animations, dark theme, and a modern design perfect for showcasing web development work.
+
+## Features
+
+- 🌙 Dark theme with subtle gradients
+- 🎨 Minimalist design with eye-catching animations
+- 📱 Fully responsive layout
+- ⚡ Fast performance with Next.js
+- 🎭 Smooth animations using Framer Motion
+- 🎯 Interactive UI elements
+- 🔍 SEO optimized
 
 ## Getting Started
 
-First, run the development server:
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+2. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Personal Information
+Edit the content in `src/app/page.tsx` to update:
+- Hero section text
+- Education details
+- Work experience
+- Project information
+- Contact information
 
-## Learn More
+### Styling
+- Global styles are in `src/app/globals.css`
+- Tailwind configuration can be modified in `tailwind.config.js`
+- Component-specific styles are within their respective files
 
-To learn more about Next.js, take a look at the following resources:
+### Navigation
+Update the navigation items in `src/components/Navigation.tsx` to match your sections.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Social Links
+Replace the social media links in the hero section with your own profiles.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Technologies Used
 
-## Deploy on Vercel
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License - feel free to use this template for your own portfolio!
