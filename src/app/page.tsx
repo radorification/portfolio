@@ -51,7 +51,7 @@ export default function Home() {
             {...fadeInUp}
             transition={{ delay: 0.1 }}
           >
-            Web Developer
+            Full Stack Developer
           </motion.h3>
           <motion.p 
             className="text-xl text-gray-300 max-w-2xl mb-8"

@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import img1 from "../../public/dash1.png";
+import img2 from "../../public/image.png";
+import mirror from "../../public/mirror.png";
 
 interface Project {
   id: number;
@@ -16,12 +19,12 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A modern e-commerce platform built with React, Node.js, and MongoDB.",
+    title: "Trendmingle- AI-powered Social Media Management",
+    description: "AI-powered social media management platform designed for creators and marketing teams. It streamlines content scheduling, provides AI-generated suggestions, and offers comprehensive analytics across multiple social media platforms.",
     technologies: ["React", "Node.js", "Express", "MongoDB"],
     gradient: "from-blue-500 to-purple-600",
-    imageUrl: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    projectUrl: "https://example.com/ecommerce"
+    imageUrl: img1.src,
+    projectUrl: "https://github.com/radorification/trendmingle"
   },
   {
     id: 2,
@@ -34,29 +37,29 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Crypto Dashboard",
-    description: "Real-time cryptocurrency dashboard with charts and data visualization.",
+    title: "task-o",
+    description: "A collaborative project management tool with boards, lists, and cards for organizing tasks, while incorporating real-time updates and intuitive drag-and-drop functionality to enhance team productivity.",
     technologies: ["Next.js", "D3.js", "WebSockets", "Framer Motion"],
     gradient: "from-emerald-400 to-blue-500",
-    imageUrl: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1585&q=80",
-    projectUrl: "https://example.com/crypto-dashboard"
+    imageUrl: img2.src,
+    projectUrl: "https://tasko-ank.vercel.app/"
   },
   {
     id: 4,
-    title: "Social Network App",
-    description: "Mobile-first social networking app with real-time messaging.",
+    title: "Mirror IO",
+    description: "Mirror IO is a generative AI chatbot that uses Google's Gemini LLM model to provide a seamless and intuitive chat experience.",
     technologies: ["React Native", "Firebase", "Redux", "Socket.io"],
     gradient: "from-purple-500 to-pink-600",
-    imageUrl: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    projectUrl: "https://example.com/social-network"
+    imageUrl: mirror.src,
+    projectUrl: "https://mirror-io.vercel.app/"
   },
   {
     id: 5,
-    title: "Portfolio Site",
-    description: "Interactive developer portfolio featuring modern design and animations.",
+    title: "Stream Tube",
+    description: "A production-level backend video streaming app with features like video uploads, streaming, watch history, subscriptions, comments, profile customization, JWT-based authentication, secure password hashing with bcrypt and file handling via Cloudinary.",
     technologies: ["Next.js", "TailwindCSS", "Framer Motion", "TypeScript"],
     gradient: "from-blue-400 to-indigo-600",
-    imageUrl: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1455&q=80",
+    imageUrl: "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #533483)",
     projectUrl: "https://example.com/portfolio"
   }
 ];
@@ -201,11 +204,18 @@ export default function ProjectCarousel() {
                 onClick={handleProjectClick}
               >
                 <div className="aspect-video rounded-lg overflow-hidden mb-4 relative">
-                  <img 
-                    src={projects[activeIndex].imageUrl} 
-                    alt={projects[activeIndex].title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  {projects[activeIndex].imageUrl.startsWith('linear-gradient') ? (
+                    <div 
+                      className="w-full h-full"
+                      style={{ background: projects[activeIndex].imageUrl }}
+                    />
+                  ) : (
+                    <img 
+                      src={projects[activeIndex].imageUrl} 
+                      alt={projects[activeIndex].title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors duration-300"></div>
                   
                   {/* Visit site button overlay */}
